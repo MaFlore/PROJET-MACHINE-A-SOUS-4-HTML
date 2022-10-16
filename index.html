@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Machine à sous</title>
+</head>
+
+<body id="body">
+    <h2 id="bienvenue">BIENVENUE DANS NOTRE CASINO !</h2>
+    <h4 id="regle">LES REGLES DU JEUX</h4>
+    <h4 id="regle1">Règle 1 = Niveau Facile</h4>
+    <ul>
+        <li>Si le nombre tiré est compris entre 0 et 50(exclu) alors vous avez perdu votre mise </li>
+        <li>Si le nombre tiré est compris entre 50 et 75(exclu) alors vous avez gagné la moitié de votre mise</li>
+        <li>Si le nombre tiré est compris entre 75 et 100 alors vous avez gagné votre mise</li>
+    </ul>
+    <h4 id="regle1">Règle 2 = Niveau Moyen</h4>
+    <ul>
+        <li>Si le nombre tiré est compris entre 0 et 250(exclu) alors vous avez perdu votre mise </li>
+        <li>Si le nombre tiré est compris entre 250 et 375(exclu) alors vous avez gagné le quart de votre mise</li>
+        <li>Si le nombre tiré est compris entre 75 et 100 alors vous avez gagné votre mise</li>
+    </ul>
+    <h4 id="regle1">Règle 3 = Niveau Difficile</h4>
+    <ul>
+        <li>Si le nombre tiré est compris entre 0 et 500(exclu) alors vous avez perdu votre mise </li>
+        <li>Si le nombre tiré est compris entre 500 et 750(exclu) alors vous avez gagné le 3/4 de votre mise</li>
+        <li>Si le nombre tiré est compris entre 750 et 1000 alors vous avez gagné votre mise</li>
+    </ul>
+    <div id="commence">
+        <h3>Pour Commencer La Partie Veuillez Entrer Votre</h3>
+        <form action="index_deux.html" method="get">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom">
+            <a href="index_deux.html"><input type="button" onclick="partie();" value="Commencez Ma Partie"></a>
+        </form>
+    </div>
+</body>
+<script text="text/javascript">
+    function partie() {
+        var nom = document.getElementById('nom').value;
+        localStorage.setItem("valeur", nom);
+    }
+</script>
+
+</html>

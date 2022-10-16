@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="json.js"></script>
+    <title>Machine à sous</title>
+</head>
+
+<body id="body_un">
+    <div>
+        <h2 id="bienvenue">CASINO !</h2>
+
+        <div id="info">
+            M. <span id="bravo"></span>
+            <p id="resultat">
+            </p>
+            <p id="resultatdeux"></p>
+        </div>
+        <h3 id="affichagePortefeuille"><u>Votre Porte-Feuille (F CFA)</u> : </h3>
+        <p id="gain">25000</p>
+        <p id="commencer">Pour commencer le jeux, entrez les informations suivantes :</p>
+        <h3 id="charge">Traitement de la requete en cours !</h3>
+        <div id="formulaire">
+            <form action="" method="get">
+                <label for="nom">Niveau : </label>
+                <input type="radio" name="niveau" value="facile" checked="checked">Facile
+                <input type="radio" name="niveau" value="moyen">Moyen
+                <input type="radio" name="niveau" value="difficile">Difficile
+                <br>
+                <br>
+                <label for="mise">Mise : </label>
+                <input type="number" name="mise" id="mise" placeholder="Entrez votre mise">
+                <br>
+                <br>
+                <input name="button" type="button" class="btn btn-info" id="button" onclick="jouer();" value="JOUER">
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    document.getElementById('bravo').innerHTML = localStorage.getItem("valeur")
+    var nombreTentative = 0;
+    console.log(localStorage.getItem("valeur"))
+    console.log(document.getElementById('gain').innerText);
+</script>
+<script type="text/javascript" src="fonctionsMachine.js"></script>
+<script type="text/javascript" src="fonctionsAjax.js"></script>
+
+</html>
